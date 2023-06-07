@@ -1,0 +1,22 @@
+
+
+<h3 align="center">Save a Student</h3>
+<div class="row">
+ <div class="mx-auto col-10 col-md-8 col-lg-6">
+<form name="studentform" (ngSubmit)="onSubmit()" class="was-validated card p-3 bg-light" ><!--we are calling a method we have to create a method on component file-->
+    <div class="form-group">
+       <div><label for="">Name</label>
+        <input type="text" required pattern="[a-zA-Z]*" class="form-control" id="name" [(ngModel)]="student.name" name="name" placeholder="Enter Name…" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div> 
+    </div>
+        <div><label for="">Department</label>
+        <input type="text" required pattern="[a-zA-Z]*" class="form-control" id="dept" [(ngModel)]="student.dept" name="dept" placeholder="Enter Department" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div> 
+    </div>
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+    
+</form>
+</div></div>

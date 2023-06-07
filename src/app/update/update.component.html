@@ -1,0 +1,24 @@
+<p>update works!</p>
+<h3>Update a Student</h3>
+<div>
+    
+    <form (submit)="getStudentById()">
+      <label for="idInput" hidden>ID:</label>
+      <input type="hidden" id="idInput" [(ngModel)]="id" name="Id" required>
+      <!--<button type="submit">Retrieve</button>-->
+    </form>
+    <div class="row">
+      <div class="mx-auto col-10 col-md-8 col-lg-6">
+    <div *ngIf="student">
+      <h3>Student Details</h3>
+      <form (submit)="saveUpdatedStudent()" class = 'card p-1'>
+        <input type="hidden" [(ngModel)]="student.id" name="id">
+        <label for="nameInput">Name:</label>
+        <input type="text" [(ngModel)]="student.name" name="name" required><br>
+        <label for="department">Department:</label>
+        <input type="text" [(ngModel)]="student.dept" name="dept" required><br>
+        <button class="btn btn-outline-secondary" type="submit">Update Product</button>
+      </form>
+    </div>
+  </div>
+  </div></div>
