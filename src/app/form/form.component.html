@@ -1,0 +1,9 @@
+<p>form works!</p>
+<div class="container">
+    <h3>Login Form</h3>
+      Enter Name: <input type="text" class="form-control" [(ngModel)]="Name"><br>
+      Enter PhoneNumber: <input type="text" class="form-control" [(ngModel)]="Phone"><br>
+      Enter DOB: <input type="text" class="form-control" [(ngModel)]="dob"><br>
+      <input type="button" value="View"  (click)="viewDetails()">{{value}}
+      <app-display  [parentData1]="parentData1" [parentData2]="parentData2" [parentData3]="parentData3" (submitdata)="submitdata($event)"></app-display>
+  </div>
