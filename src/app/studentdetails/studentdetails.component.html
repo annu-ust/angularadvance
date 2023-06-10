@@ -1,0 +1,12 @@
+<p>studentdetails works!</p>
+<table>
+    <tr>
+      <th>Student Name</th>
+      <th></th>
+    </tr>
+    <tr *ngFor="let student of studentDetails">
+      <td>{{student}}</td>
+      <td><input type="button" value="Select" 
+        (click)="studentSelected(student)"></td>
+    </tr>
+</table>
